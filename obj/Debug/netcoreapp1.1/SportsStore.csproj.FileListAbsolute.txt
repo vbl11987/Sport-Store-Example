@@ -1,0 +1,10 @@
+/home/boris/dotnet/SportsStore/bin/Debug/netcoreapp1.1/SportsStore.db
+/home/boris/dotnet/SportsStore/bin/Debug/netcoreapp1.1/SportsStore.deps.json
+/home/boris/dotnet/SportsStore/bin/Debug/netcoreapp1.1/SportsStore.runtimeconfig.json
+/home/boris/dotnet/SportsStore/bin/Debug/netcoreapp1.1/SportsStore.runtimeconfig.dev.json
+/home/boris/dotnet/SportsStore/bin/Debug/netcoreapp1.1/SportsStore.dll
+/home/boris/dotnet/SportsStore/bin/Debug/netcoreapp1.1/SportsStore.pdb
+/home/boris/dotnet/SportsStore/obj/Debug/netcoreapp1.1/UserSecretsAssemblyInfo.cs
+/home/boris/dotnet/SportsStore/obj/Debug/netcoreapp1.1/SportsStore.AssemblyInfo.cs
+/home/boris/dotnet/SportsStore/obj/Debug/netcoreapp1.1/SportsStore.dll
+/home/boris/dotnet/SportsStore/obj/Debug/netcoreapp1.1/SportsStore.pdb
