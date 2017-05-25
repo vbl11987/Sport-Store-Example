@@ -66,3 +66,8 @@ textarea {
 #general {
     padding-top: 25px;
 }
+
+.input-validation-error {
+    border-color: red;
+    background-color: #fee;
+}

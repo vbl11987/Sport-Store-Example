@@ -8,9 +8,10 @@ using SportsStore.Models;
 namespace SportsStore.Migrations
 {
     [DbContext(typeof(SportsStoreDbContext))]
-    partial class SportsStoreDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170524150500_UpdateOrders")]
+    partial class UpdateOrders
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.1");
@@ -57,8 +58,6 @@ namespace SportsStore.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired();
-
-                    b.Property<bool>("Shipped");
 
                     b.Property<string>("State")
                         .IsRequired();

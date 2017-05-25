@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" asp-href-include="/lib/fontawesome/css/*.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <title>ViewBag.Title</title>
+    </head>
+    <body class="panel panel-default">
+        <div class="panel panel-heading">
+            <h4>@ViewBag.Title</h4>
+        </div>
+        <div class="panel-body">
+            @if (TempData["message"] != null){
+                <div class="alert alert-success">@TempData["message"]</div>
+            }
+            @RenderBody()
+        </div>
+        <environment names="Development">
+            <script src="~/lib/jquery/dist/jquery.js"></script>
+            <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+            <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+            <script src="~/js/site.js" asp-append-version="true"></script>
+        </environment>
+    </body>
+</html>

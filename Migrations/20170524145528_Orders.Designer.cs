@@ -8,32 +8,13 @@ using SportsStore.Models;
 namespace SportsStore.Migrations
 {
     [DbContext(typeof(SportsStoreDbContext))]
-    partial class SportsStoreDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170524145528_Orders")]
+    partial class Orders
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.1");
-
-            modelBuilder.Entity("SportsStore.Models.CartLine", b =>
-                {
-                    b.Property<int>("CartLineID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int?>("OrderID");
-
-                    b.Property<int?>("ProductID");
-
-                    b.Property<int>("Quantity");
-
-                    b.HasKey("CartLineID");
-
-                    b.HasIndex("OrderID");
-
-                    b.HasIndex("ProductID");
-
-                    b.ToTable("CartLine");
-                });
 
             modelBuilder.Entity("SportsStore.Models.Order", b =>
                 {
@@ -57,8 +38,6 @@ namespace SportsStore.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired();
-
-                    b.Property<bool>("Shipped");
 
                     b.Property<string>("State")
                         .IsRequired();
@@ -86,17 +65,6 @@ namespace SportsStore.Migrations
                     b.HasKey("ProductID");
 
                     b.ToTable("Products");
-                });
-
-            modelBuilder.Entity("SportsStore.Models.CartLine", b =>
-                {
-                    b.HasOne("SportsStore.Models.Order")
-                        .WithMany("Lines")
-                        .HasForeignKey("OrderID");
-
-                    b.HasOne("SportsStore.Models.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductID");
                 });
         }
     }
